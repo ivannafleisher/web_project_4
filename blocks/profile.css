@@ -1,0 +1,61 @@
+.profile {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 40px;
+}
+
+.profile__image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile__explorer {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.profile__explorer-divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+}
+
+.profile__explorer-name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 48px;
+    width: 373px;
+    margin: 0;
+}
+
+.profile__explorer-button {
+    width: 24px;
+    height: 24px;
+    align-self: center;
+}
+
+.profile_add-button {
+    width: 150px;
+    height: 50px;
+    margin: 0 0 0 165px;
+    align-self: flex-start;
+}
+
+.profile__explorer-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    width: 415px;
+    margin: 16px 0 0;
+}
