@@ -1,0 +1,52 @@
+.gallery {
+    margin: 46px 0 68px;
+    box-sizing: border-box;
+}
+
+.gallery__list {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    grid-gap: 17px;
+    margin: 0;
+}
+
+.gallery__item {
+    max-width: 282px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gallery__discription {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 25px 15px 31px 21px;
+}
+
+.gallery__img {
+    max-width: 100%;
+}
+
+.gallery__img-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+}
+
+.gallery__item-like {
+    background-image: url("../images/Unionblack-heart.png");
+    background-size: 0;
+    background-repeat: no-repeat;
+    /* opacity: 0.5; */
+    width: 19px;
+    height: 21px;
+}
