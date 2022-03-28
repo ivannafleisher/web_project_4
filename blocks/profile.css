@@ -1,6 +1,12 @@
 .profile {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile__main {
+    display: flex;
+    flex-direction: row;
     color: white;
     margin-top: 40px;
 }
@@ -16,7 +22,6 @@
     margin-left: 30px;
     display: flex;
     flex-direction: column;
-    align-content: center;
     justify-content: center;
 }
 
@@ -33,21 +38,43 @@
     font-weight: 500;
     font-size: 42px;
     line-height: 48px;
-    width: 373px;
+    max-width: 373px;
     margin: 0;
 }
 
+<<<<<<< HEAD
 .profile__discription-button {
+=======
+.profile__edit-button {
+    text-decoration: none;
+    background-image: url("../images/edit_button.svg");
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    object-fit: cover;
+    background-color: black;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+>>>>>>> feature/footer
     width: 24px;
     height: 24px;
-    align-self: center;
 }
 
 .profile__add-button {
     width: 150px;
     height: 50px;
-    margin: 0 0 0 165px;
-    align-self: flex-start;
+    margin: 75px 0 0 0;
+    text-decoration: none;
+    background-image: url("../images/add_button.svg");
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: center;
+    object-fit: cover;
+    background-color: black;
+    padding: 0;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2px;
 }
 
 .profile__discription-title {
@@ -56,6 +83,37 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    width: 415px;
     margin: 16px 0 0;
+}
+
+@media screen and (max-width: 884px) {
+    .profile {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .profile__main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .profile__add-button {
+        width: 282px;
+        height: 50px;
+        margin-top: 36px;
+    }
+    .profile__discription {
+        margin-top: 26px;
+        margin-left: 0;
+    }
+    .profile__discription-name {
+        font-size: 22px;
+        line-height: 27px;
+        max-width: 196px;
+        text-align: center;
+    }
+    .profile__discription-title {
+        margin: 14px 0 0;
+    }
 }
