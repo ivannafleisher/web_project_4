@@ -1,16 +1,15 @@
-.header {
+.content {
     width: 880px;
-    border-bottom: 1px solid #545454;
 }
 
 @media screen and (max-width: 884px) {
-    .header {
+    .content {
         width: 664px;
     }
 }
 
 @media screen and (max-width: 680px) {
-    .header {
-        width: 320px;
+    .content {
+        width: 282px;
     }
 }

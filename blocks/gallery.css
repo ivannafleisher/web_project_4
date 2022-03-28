@@ -16,10 +16,8 @@
 }
 
 .gallery__item {
-    max-width: 282px;
     background-color: white;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 .gallery__discription {
@@ -30,7 +28,8 @@
 }
 
 .gallery__img {
-    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .gallery__img-title {
@@ -40,13 +39,42 @@
     font-size: 24px;
     line-height: 29px;
     margin: 0;
+    max-width: 220px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .gallery__item-like {
     background-image: url("../images/Unionblack-heart.png");
     background-size: 0;
     background-repeat: no-repeat;
-    /* opacity: 0.5; */
-    width: 19px;
-    height: 21px;
+    align-self: center;
+    width: 21px;
+    height: 19px;
+}
+
+.gallery__item-like:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.gallery__item-like:active {
+    background-size: contain;
+    opacity: 1;
+}
+
+@media screen and (max-width: 884px) {
+    .gallery__list {
+        grid-template-columns: repeat(2, minmax(282px, 1fr));
+        grid-gap: 17px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .gallery__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
