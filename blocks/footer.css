@@ -1,0 +1,30 @@
+.footer {
+    margin: 0 0 60px;
+    width: 880px;
+}
+
+.footer__copyrights {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #545454;
+    margin: 0;
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 884px) {
+    .footer {
+        width: 664px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .footer {
+        width: 320px;
+    }
+    .footer__copyrights {
+        margin-left: 19px;
+    }
+}

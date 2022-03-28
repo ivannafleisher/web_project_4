@@ -12,7 +12,7 @@
     border-radius: 50%;
 }
 
-.profile__explorer {
+.profile__discription {
     margin-left: 30px;
     display: flex;
     flex-direction: column;
@@ -20,14 +20,14 @@
     justify-content: center;
 }
 
-.profile__explorer-divider {
+.profile__discription-divider {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 18px;
 }
 
-.profile__explorer-name {
+.profile__discription-name {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -37,7 +37,7 @@
     margin: 0;
 }
 
-.profile__explorer-button {
+.profile__discription-button {
     width: 24px;
     height: 24px;
     align-self: center;
@@ -50,7 +50,7 @@
     align-self: flex-start;
 }
 
-.profile__explorer-title {
+.profile__discription-title {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
