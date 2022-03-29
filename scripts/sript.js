@@ -3,7 +3,9 @@ const closeButton = document.querySelector(".modal__close-button");
 const formElement = document.querySelector(".modal__form");
 const submitButton = formElement.querySelector(".modal__save-button");
 
+// UTILS functions 
 function closeModal() {
+
     document.querySelector(".modal").classList.remove("modal__open");
     document.querySelector(".overlay").classList.remove("overlay__open");
 }
@@ -13,8 +15,8 @@ function openModal() {
     document.querySelector(".overlay").classList.add("overlay__open");
 }
 
+//HANDLERS
 function handleEditProfile(evt) {
-
     let profileName = document.querySelector(".profile__discription-name");
     let profileJob = document.querySelector(".profile__discription-title");
 
@@ -39,6 +41,7 @@ function handleProfileFormSubmit(evt) {
     closeModal();
 }
 
+//MAIN
 editButton.addEventListener('click', handleEditProfile);
 closeButton.addEventListener('click', handleExitProfile);
 submitButton.addEventListener('click', handleProfileFormSubmit);
