@@ -1,30 +1,44 @@
-// Let's find the form in the DOM
-let formElement = // Use the querySelector() method
+const editButton = document.querySelector(".profile__edit-button");
+const closeButton = document.querySelector(".modal__close-button");
+const formElement = document.querySelector(".modal__form");
+const submitButton = formElement.querySelector(".modal__save-button");
 
-    // Next is the form submit handler, though
-    // it won't submit anywhere just yet
+function closeModal() {
+    document.querySelector(".modal").classList.remove("modal__open");
+    document.querySelector(".overlay").classList.remove("overlay__open");
+}
 
-    // Note that the function name starts with a verb
-    // and describes exactly what the function does
-    function handleProfileFormSubmit(evt) {
-        // This line stops the browser from 
-        // submitting the form in the default way.
-        evt.preventDefault();
-        // Having done so, we can define our own way of submitting the form.
-        // We'll explain it in more detail later.
+function openModal() {
+    document.querySelector(".modal").classList.add("modal__open");
+    document.querySelector(".overlay").classList.add("overlay__open");
+}
 
-        // Let's find the form fields in the DOM
-        let nameInput = // Use querySelector()
-            let jobInput = // Use querySelector()
+function handleEditProfile(evt) {
 
-                // Get the values of each field from the corresponding value property
+    let profileName = document.querySelector(".profile__discription-name");
+    let profileJob = document.querySelector(".profile__discription-title");
 
-                // Select elements where the field values will be entered
+    formElement.querySelector(".modal__input_name").value = profileName.textContent;
+    formElement.querySelector(".modal__input_job").value = profileJob.textContent;
 
-                // Insert new values using the textContent 
-                // property of the querySelector() method
-    }
+    openModal();
+}
 
-// Connect the handler to the form:
-// it will watch the submit event
-formElement.addEventListener('submit', handleProfileFormSubmit);
+function handleExitProfile(evt) {
+    closeModal();
+}
+
+function handleProfileFormSubmit(evt) {
+    evt.preventDefault();
+
+    let profileName = document.querySelector(".profile__discription-name");
+    let profileJob = document.querySelector(".profile__discription-title");
+
+    profileName.textContent = formElement.querySelector(".modal__input_name").value;
+    profileJob.textContent = formElement.querySelector(".modal__input_job").value;
+    closeModal();
+}
+
+editButton.addEventListener('click', handleEditProfile);
+closeButton.addEventListener('click', handleExitProfile);
+submitButton.addEventListener('click', handleProfileFormSubmit);

@@ -8,11 +8,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Ivanna Fleisher">
     <title>Around the U.S.</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif&display=swap" rel="stylesheet">
 </head>
 
 <body class="body">
@@ -34,9 +30,9 @@
                                 <h2 class=" modal__title ">Edit profile</h2>
                                 <form class="modal__form">
                                     <fieldset class="modal__fieldset ">
-                                        <label><input placeholder="Name" class="modal__input " type="text " /></label>
-                                        <label><input placeholder="About me" class="modal__input " type="text " /></label>
-                                        <button class=" button modal__button ">Save</button>
+                                        <label><input placeholder="Name" class="modal__input modal__input_name" type="text " /></label>
+                                        <label><input placeholder="About me" class="modal__input modal__input_job" type="text " /></label>
+                                        <button class=" button modal__save-button ">Save</button>
                                     </fieldset>
                                 </form>
                             </div>
@@ -52,52 +48,54 @@
                         <img src="./images/image_yosemite-valley.jpg " alt="Yosemite Valley " class="gallery__img ">
                         <div class="gallery__discription ">
                             <h2 class="gallery__img-title ">Yosemite Valley</h2>
-                            <img src="./images/Vectorlike.svg " alt=" " class="gallery__item-like ">
+                            <button class=" button gallery__item-like  "></button>
                         </div>
                     </li>
                     <li class="gallery__item ">
                         <img src="./images/image_lake-louise.png " alt="Lake Louise " class="gallery__img ">
                         <div class="gallery__discription ">
                             <h2 class="gallery__img-title ">Lake Louise</h2>
-                            <img src="./images/Vectorlike.svg " alt=" " class="gallery__item-like ">
+                            <button class=" button gallery__item-like  "></button>
                         </div>
                     </li>
                     <li class="gallery__item ">
                         <img src="./images/image_bald-mountains.png " alt="Bald Mountains " class="gallery__img ">
                         <div class="gallery__discription ">
                             <h2 class="gallery__img-title ">Bald Mountains</h2>
-                            <img src="./images/Vectorlike.svg " alt=" " class="gallery__item-like ">
+                            <button class=" button gallery__item-like  "></button>
                         </div>
                     </li>
                     <li class="gallery__item ">
                         <img src="./images/image_latemar.png " alt="Latemar " class="gallery__img ">
                         <div class="gallery__discription ">
                             <h2 class="gallery__img-title ">Latemar</h2>
-                            <img src="./images/Vectorlike.svg " alt=" " class="gallery__item-like ">
+                            <button class=" button gallery__item-like  "></button>
                         </div>
                     </li>
                     <li class="gallery__item ">
                         <img src="./images/image_vanoise-national.png " alt="Vanoise National " class="gallery__img ">
                         <div class="gallery__discription ">
                             <h2 class="gallery__img-title ">Vanoise National Park</h2>
-                            <img src="./images/Vectorlike.svg " alt=" " class="gallery__item-like ">
+                            <button class=" button gallery__item-like  "></button>
                         </div>
                     </li>
                     <li class="gallery__item ">
                         <img src="./images/image_lago-di-braies.png " alt="Lago di Braies " class="gallery__img ">
                         <div class="gallery__discription ">
                             <h2 class="gallery__img-title ">Lago di Braies</h2>
-                            <img src="./images/Vectorlike.svg " alt=" " class="gallery__item-like ">
+                            <button class=" button gallery__item-like  "></button>
                         </div>
                     </li>
 
                 </ul>
             </section>
         </main>
+
         <footer class="footer ">
             <p class="footer__copyrights ">© 2022 Ivanna Fleisher</p>
         </footer>
     </div>
+    <script src="./scripts/sript.js"></script>
 </body>
 
 </html>

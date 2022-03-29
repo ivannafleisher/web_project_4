@@ -1,5 +1,5 @@
 .modal {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: calc(50vh - 330px/2);
     left: calc(50vw - 430px/2);
@@ -11,6 +11,10 @@
     border-radius: 6px;
 }
 
+.modal__open {
+    display: block;
+}
+
 .modal__title {
     font-family: 'Inter';
     font-style: normal;
@@ -18,6 +22,7 @@
     font-size: 24px;
     line-height: 29px;
     color: #000000;
+    margin: 0 0 54px;
 }
 
 .modal__fieldset {
@@ -25,6 +30,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px;
     margin: auto;
     border: none;
     padding: 0;
@@ -37,8 +43,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, .2);
     outline: none;
     box-sizing: border-box;
-    margin-bottom: 32px;
-    padding-left: 10px;
+    padding: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -50,7 +55,7 @@
     box-shadow: 0 0 3px rgb(77, 77, 185);
 }
 
-.modal__button {
+.modal__save-button {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -62,6 +67,7 @@
     color: #FFFFFF;
     background: #000000;
     border-radius: 2px;
+    margin-top: 18px;
 }
 
 .modal__close-button {
@@ -73,11 +79,41 @@
     border: none;
     padding: 0;
     height: 40px;
+    width: 40px;
     right: -42px;
     top: -42px;
-    width: 40px;
 }
 
 .modal__close-button:before {
     transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 680px) {
+    .modal {
+        top: calc(40vh - 322px/2);
+        left: calc(50vw - 282px/2);
+        padding: 25px 22px;
+    }
+    .modal__close-button {
+        background-size: 26px;
+        height: 26px;
+        width: 26px;
+        top: -40px;
+        right: 0;
+    }
+    .modal__title {
+        text-align: start;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .modal__input {
+        width: 238px;
+        height: 30px;
+    }
+    .modal__save-button {
+        font-size: 14px;
+        line-height: 17px;
+        height: 46px;
+        margin-top: 16px;
+    }
 }
