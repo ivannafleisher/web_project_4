@@ -12,7 +12,7 @@
 }
 
 .gallery {
-    margin: 46px 0 68px;
+    margin: 46px 0 50px;
     box-sizing: border-box;
 }
 
@@ -24,7 +24,7 @@
     list-style-type: none;
     padding: 0;
     grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
-    grid-gap: 17px;
+    gap: 17px;
     margin: 0;
 }
 
@@ -83,7 +83,6 @@
 @media screen and (max-width: 884px) {
     .gallery__list {
         grid-template-columns: repeat(2, minmax(282px, 1fr));
-        grid-gap: 17px;
     }
 }
 
