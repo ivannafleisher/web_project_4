@@ -5,11 +5,11 @@ const formElement = document.querySelector(".popup__form");
 // UTILS functions 
 function closePopup() {
 
-    document.querySelector(".modal").classList.remove("modal__opened");
+    document.querySelector(".modal").classList.remove("modal_opened");
 }
 
 function openPopup() {
-    document.querySelector(".modal").classList.add("modal__opened");
+    document.querySelector(".modal").classList.add("modal_opened");
 }
 
 //HANDLERS
