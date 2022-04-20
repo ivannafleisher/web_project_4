@@ -29,9 +29,11 @@
 }
 
 .gallery__item {
+    position: relative;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
+    width: 100%;
 }
 
 .gallery__discription {
@@ -43,7 +45,23 @@
 
 .gallery__img {
     width: 100%;
+    height: 282px;
     object-fit: cover;
+}
+
+.gallery__clean-button {
+    position: absolute;
+    background-image: url("../images/clean_button.png");
+    background-size: 19px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    object-fit: cover;
+    padding: 0;
+    height: 19px;
+    width: 18px;
+    right: 15px;
+    top: 18px;
 }
 
 .gallery__img-title {
@@ -74,9 +92,9 @@
     opacity: 0.5;
 }
 
-.gallery__item-like:active {
+.gallery__item-like__active {
     background-image: url("../images/black-heart.png");
-    animation: pulse 1s forwards;
+    animation: pulse 0.5s forwards;
     opacity: 1;
 }
 
