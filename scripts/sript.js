@@ -1,7 +1,5 @@
 const addButton = document.querySelector(".profile__add-button");
 const editButton = document.querySelector(".profile__edit-button");
-//const closeButton = document.querySelector(".popup__close-button");
-//const formElement = document.querySelector(".popup__form");
 const galleryList = document.querySelector(".gallery__list");
 
 const initialCards = [{
@@ -116,10 +114,6 @@ function handleEditProfile(evt) {
     let profileName = document.querySelector(".profile__discription-name");
     let profileJob = document.querySelector(".profile__discription-title");
 
-    // formElement.querySelector(".popup__input_text_name").value = profileName.textContent;
-    // formElement.querySelector(".popup__input_text_job").value = profileJob.textContent;
-
-
     document.querySelector(".popup__input_text_name").value = profileName.textContent;
     document.querySelector(".popup__input_text_job").value = profileJob.textContent;
 
@@ -139,23 +133,6 @@ function handleProfileFormSubmit(evt) {
 
 
 //POPUP create
-// function createAddPopUp() {
-//     const popupTemplate = document.querySelector("#template_popup").content;
-//     const popupElement = popupTemplate.querySelector('.modal').cloneNode(true);
-
-//     popupElement.classList.add("modal_add");
-//     document.querySelector(".content").append(popupElement);
-
-//     popupElement.querySelector(".popup__title").textContent = "New place";
-//     popupElement.querySelector(".popup__input_title").placeholder = "Title";
-//     popupElement.querySelector(".popup__input_link").placeholder = "Image link";
-
-//     popupElement.querySelector(".popup__close-button").addEventListener('click',
-//         () => { closePopup(".modal_add") });
-//     const save_button = popupElement.querySelector(".popup__save-button");
-//     console.log("create popup");
-//     save_button.addEventListener('click', handleAddFormSubmit);
-// }
 
 function createAddPopUp() {
     const popupTemplate = document.querySelector("#template_popup-form").content;
@@ -203,9 +180,9 @@ function createEditPopUp() {
 //MAIN
 createAddPopUp();
 createEditPopUp();
+
 initialCards.forEach((item) => { createCard(item.name, item.link); });
 createPopupPicture();
+
 addButton.addEventListener('click', handleAddProfile);
 editButton.addEventListener('click', handleEditProfile);
-//closeButton.addEventListener('click', () => { closePopup(".modal") });
-//formElement.addEventListener('submit', handleProfileFormSubmit);

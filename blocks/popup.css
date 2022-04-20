@@ -94,6 +94,23 @@
     transform: rotate(-45deg);
 }
 
+.popup__window {
+    position: relative;
+    width: max-content;
+    height: max-content;
+}
+
+.popup__caption {
+    font-family: "Inter", Arial, sans-serif;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+.popup__image {
+    max-width: 75vw;
+    max-height: 75vh;
+}
+
 @media screen and (max-width: 680px) {
     .popup {
         padding: 25px 22px;
