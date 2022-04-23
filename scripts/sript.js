@@ -59,31 +59,31 @@ function fillProfileForm(name, job) {
 }
 
 //POPUP PICTURE
-function modifyPopupPicture(name, link) {
+function modifyPopupPicture(cardProps) {
     console.log("modifyPopupPicture");
-    popupImg.src = link;
-    popupCapture.textContent = name;
-    popupImg.alt = `View of ${name} `
+    popupImg.src = cardProps.imageUrl;
+    popupCapture.textContent = cardProps.name;
+    popupImg.alt = `View of ${cardProps.name} `
 
     openPopup(modalImgPopup);
 }
 
 //CARD Functions
-function createCard(name, url_image) {
+function createCard(cardProps) {
     const cardTemplate = document.querySelector("#template_card").content;
     const cardElement = cardTemplate.querySelector('.gallery__item').cloneNode(true);
     const cardLike = cardElement.querySelector(".gallery__item-like");
     const cleanButton = cardElement.querySelector(".gallery__clean-button");
 
-    cardElement.querySelector(".gallery__img-title").textContent = name;
+    cardElement.querySelector(".gallery__img-title").textContent = cardProps.name;
 
     const cardImg = cardElement.querySelector(".gallery__img");
-    cardImg.src = url_image;
-    cardImg.alt = `View of ${name} `;
+    cardImg.src = cardProps.imageUrl;
+    cardImg.alt = `View of ${cardProps.name} `;
 
     cardLike.addEventListener('click', handleLikeButton);
     cleanButton.addEventListener('click', handleCleanButton);
-    cardImg.addEventListener('click', () => { modifyPopupPicture(name, url_image); });
+    cardImg.addEventListener('click', () => { modifyPopupPicture(cardProps); });
 
     return cardElement;
 }
@@ -108,10 +108,10 @@ function handleAddProfile(evt) {
 function handleAddFormSubmit(evt) {
     evt.preventDefault();
 
-    let cardName = document.querySelector(".popup__input_title");
-    let cardLink = document.querySelector(".popup__input_link");
+    const cardName = document.querySelector(".popup__input_title");
+    const cardLink = document.querySelector(".popup__input_link");
 
-    renderCard(createCard(cardName.value, cardLink.value));
+    renderCard(createCard({ name: cardName.value, imageUrl: cardLink.value }));
     formAdd.reset();
 
     closePopup(modalAddPopup);
@@ -138,7 +138,7 @@ function handleProfileFormSubmit(evt) {
 }
 
 //MAIN
-initialCards.forEach((item) => { renderCard(createCard(item.name, item.link)); });
+initialCards.forEach((item) => { renderCard(createCard({ name: item.name, imageUrl: item.link })); });
 
 addCardButton.addEventListener('click', handleAddProfile);
 editButton.addEventListener('click', handleEditProfile);

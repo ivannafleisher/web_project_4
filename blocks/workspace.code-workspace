@@ -1,0 +1,16 @@
+{
+    "folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../web_project_3"
+		},
+		{
+			"path": "../../web_project_2"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "web_project_4"
+    }
+}
