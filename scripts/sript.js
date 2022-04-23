@@ -4,7 +4,7 @@ const editButton = document.querySelector(".profile__edit-button");
 
 const modalEditPopup = document.querySelector(".modal_edit");
 const modalAddPopup = document.querySelector(".modal_add");
-const modalImgPopup = document.querySelector(".modal__picture");
+const modalImgPopup = document.querySelector(".modal_picture");
 
 const popupImg = modalImgPopup.querySelector(".popup__image");
 const popupCapture = modalImgPopup.querySelector(".popup__caption");

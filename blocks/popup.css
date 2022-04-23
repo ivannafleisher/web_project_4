@@ -10,6 +10,11 @@
     border-radius: 6px;
 }
 
+.popup_picture {
+    background-color: transparent;
+    padding: 0;
+}
+
 .popup__title {
     font-family: "Inter", Arial, sans-serif;
     font-style: normal;
