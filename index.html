@@ -9,6 +9,8 @@
     <meta name="author" content="Ivanna Fleisher">
     <title>Around the U.S.</title>
     <link rel="stylesheet" href="./pages/index.css" />
+    <script>
+    </script>
 </head>
 
 <body class="body">
@@ -30,6 +32,39 @@
                 </div>
                 <button aria-label="add" type="button" class="button profile__add-button "></button>
             </section>
+            <section class="modal modal_edit">
+                <div class="popup">
+                    <button aria-label="close" type="button" class=" button popup__close-button "></button>
+                    <h2 class=" popup__title ">Edit profile</h2>
+                    <form name="editForm" class="popup__form popup__form_edit">
+                        <fieldset class="popup__fieldset ">
+                            <input name="inputName" type="text" placeholder="Name" class="popup__input popup__input_text_name" />
+                            <input name="inputJob" type="text" placeholder="About me" class="popup__input popup__input_text_job" />
+                            <button type="submit " class=" popup__save-button ">Save</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+            <section class="modal modal_add">
+                <div class="popup">
+                    <button aria-label="close" type="button" class=" button popup__close-button "></button>
+                    <h2 class=" popup__title ">New place</h2>
+                    <form name="editForm" class="popup__form popup__form_add">
+                        <fieldset class="popup__fieldset ">
+                            <input name="inputName" type="text" placeholder="Title" class="popup__input popup__input_title" required/>
+                            <input name="inputJob" type="text" placeholder="Image link" class="popup__input popup__input_link" required/>
+                            <button type="submit " class=" popup__save-button ">Save</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+            <section class="modal modal__picture">
+                <figure class="popup__window">
+                    <button aria-label="close" type="button" class=" button popup__close-button "></button>
+                    <img class="popup__image">
+                    <figcaption class="popup__caption"></figcaption>
+                </figure>
+            </section>
             <section class="gallery">
                 <ul class="gallery__list ">
                 </ul>
@@ -49,31 +84,6 @@
             </div>
         </li>
     </template>
-    <template id="template_popup-form">
-        <section class="modal">
-            <div class="popup">
-                <button aria-label="close" type="button" class=" button popup__close-button "></button>
-                <h2 class=" popup__title "></h2>
-                <form name="editForm" class="popup__form ">
-                    <fieldset class="popup__fieldset ">
-                        <input type="text" class="popup__input " />
-                        <input type="text"  class="popup__input" />
-                        <button type="submit " class=" popup__save-button ">Save</button>
-                    </fieldset>
-                </form>
-            </div>
-        </section>
-    </template>
-    <template id="template_picture-popup">
-        <section class="modal">
-            <figure class="popup__window">
-                <button aria-label="close" type="button" class=" button popup__close-button "></button>
-                    <img class="popup__image">
-                    <figcaption class="popup__caption"></figcaption>
-            </figure>
-        </section>
-    </template>
-
     <script src="./scripts/sript.js "></script>
 </body>
 
