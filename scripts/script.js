@@ -118,8 +118,8 @@ function handleAddFormSubmit(evt) {
 }
 
 function handleEditProfile(evt) {
-    let profileName = document.querySelector(".profile__discription-name");
-    let profileJob = document.querySelector(".profile__discription-title");
+    const profileName = document.querySelector(".profile__discription-name");
+    const profileJob = document.querySelector(".profile__discription-title");
 
     fillProfileForm(profileName.textContent, profileJob.textContent);
 
@@ -129,8 +129,8 @@ function handleEditProfile(evt) {
 function handleProfileFormSubmit(evt) {
     evt.preventDefault();
 
-    let profileName = document.querySelector(".profile__discription-name");
-    let profileJob = document.querySelector(".profile__discription-title");
+    const profileName = document.querySelector(".profile__discription-name");
+    const profileJob = document.querySelector(".profile__discription-title");
 
     profileName.textContent = formEdit.querySelector(".popup__input_text_name").value;
     profileJob.textContent = formEdit.querySelector(".popup__input_text_job").value;
